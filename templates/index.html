@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chat</title>
+    <title>AI Assistant</title>
     <link rel="stylesheet" href="/static/style.css">
+    <!-- Chiroyli shriftni Google Fonts'dan ulaymiz -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="chat-container">
-        <h1>Minimal AI Chat</h1>
-        <div id="response-area">AI javobi shu yerda ko'rinadi...</div>
-        <textarea id="message-input" placeholder="Xabaringizni yozing..."></textarea>
-        <button id="submit-button">Yuborish</button>
+    <div class="chat-window">
+        <div class="chat-header">
+            <h2>AI Assistant</h2>
+            <p>Powered by Groq & Flask</p>
+        </div>
+        <div class="chat-log" id="chat-log">
+            <!-- Xabarlar shu yerda paydo bo'ladi -->
+            <div class="message ai-message">
+                <p>Salom! Men sizga yordam berish uchun shu yerdaman. Menga biror savol bering.</p>
+            </div>
+        </div>
+        <form class="chat-input-form" id="chat-form">
+            <textarea id="message-input" placeholder="Xabaringizni yozing..." required></textarea>
+            <button id="submit-button" type="submit">
+                <!-- Yuborish uchun chiroyli ikonka -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </form>
     </div>
 
     <script src="/static/script.js"></script>
